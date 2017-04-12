@@ -14,7 +14,7 @@ Basic Successful FetchUrl
 Check Element Contains Text
     Go To  https://coderslyf.github.io/robot-framework-example-html/robot-sample.html  
     Location Should Be  https://coderslyf.github.io/robot-framework-example-html/robot-sample.html
-	Execute Javascript  window.open("https://coderslyf.github.io/robot-framework-example-html/login.html")
+	Element Text Should Be  alert  Alerts 
  	
 *** Keywords ***
 

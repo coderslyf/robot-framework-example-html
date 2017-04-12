@@ -1,3 +1,4 @@
+
 *** Settings ***
 Library		Selenium2Library
 
@@ -11,13 +12,15 @@ ${loginUrl}   https://coderslyf.github.io/robot-framework-example-html/robot-sam
 Basic Successful FetchUrl
     Test Begin    ${loginUrl}
 
-Check Element Contains Text
+Test To Get Element Attribute
     Go To  https://coderslyf.github.io/robot-framework-example-html/robot-sample.html  
     Location Should Be  https://coderslyf.github.io/robot-framework-example-html/robot-sample.html
-	Execute Javascript  window.open("https://coderslyf.github.io/robot-framework-example-html/login.html")
- 	
+ 	${Count}=    Get matching xpath count    //div[@id='i1']
+	Run Keyword If  ${Count} > 1  Found More Elements
+	
 *** Keywords ***
-
 Test Begin
 	[Arguments]     ${url}
 	Open Browser    ${url}
+	   
+ 	

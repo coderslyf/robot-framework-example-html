@@ -1,3 +1,4 @@
+
 *** Settings ***
 Library		Selenium2Library
 
@@ -11,13 +12,15 @@ ${loginUrl}   https://coderslyf.github.io/robot-framework-example-html/robot-sam
 Basic Successful FetchUrl
     Test Begin    ${loginUrl}
 
-Check Element Contains Text
+Test to get list of options under select
     Go To  https://coderslyf.github.io/robot-framework-example-html/robot-sample.html  
     Location Should Be  https://coderslyf.github.io/robot-framework-example-html/robot-sample.html
-	Execute Javascript  window.open("https://coderslyf.github.io/robot-framework-example-html/login.html")
- 	
+ 	Fail  #TODO:  no html with select tag
+	
 *** Keywords ***
-
 Test Begin
 	[Arguments]     ${url}
 	Open Browser    ${url}
+	
+Fail
+   Get List Items  id=form	

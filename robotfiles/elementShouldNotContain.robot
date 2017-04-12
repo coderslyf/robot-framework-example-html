@@ -11,11 +11,18 @@ ${loginUrl}   https://coderslyf.github.io/robot-framework-example-html/robot-sam
 Basic Successful FetchUrl
     Test Begin    ${loginUrl}
 
-Check Element Contains Text
+Check Element Contains
     Go To  https://coderslyf.github.io/robot-framework-example-html/robot-sample.html  
     Location Should Be  https://coderslyf.github.io/robot-framework-example-html/robot-sample.html
-	Execute Javascript  window.open("https://coderslyf.github.io/robot-framework-example-html/login.html")
+	Element Should Contain  alert  Alerts 
  	
+	
+Check Element Donot Contain	
+	Go To  https://coderslyf.github.io/robot-framework-example-html/robot-sample.html  
+    Location Should Be  https://coderslyf.github.io/robot-framework-example-html/robot-sample.html
+	Element Should Not Contain  alert  Alertss 
+ 	
+	
 *** Keywords ***
 
 Test Begin
