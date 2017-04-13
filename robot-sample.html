@@ -269,7 +269,6 @@
           <b>Nickname</b> Sweetie, Cutie Pie :P<br>
           <b>Hobbies:</b> Sleeping,Playing<br>
           <b>Associated Programs:</b>  Tea TimeDaycare, Little Swim Club
-           
           </p>
         </div>
         <!-- box 1-->
@@ -395,7 +394,7 @@
          <div class="dropdown">
          <button type="button"  class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">  Me <span class="caret"></span></button> 
               <ul class="dropdown-menu">
-                   <li><a href="http://www.htmlgoodies.com" onMouseOver="window.status='Click here to go to HTML Goodies'; return true" onMouseOut="window.status='I said click!'; return true">Goyt</a></li>
+                   <li><a href="http://www.htmlgoodies.com" id="me-goyt" onMouseOver="window.status='Click here to go to HTML Goodies'; return true; " onMouseOut="window.status='I said click!'; return true">Goyt</a></li>
                          <li><a href="#">Public</a></li>
                                  <li><a href="#">Me</a></li>
                    </ul>  
@@ -516,9 +515,8 @@
 
 
 
-
-   <!-- Javascript -->
- <script type="text/javascript">
+<!-- Javascript -->
+<script type="text/javascript">
          //Stack menu when collapsed
 $('#bs-example-navbar-collapse-1').on('show.bs.collapse', function() {
     $('.nav-pills').addClass('nav-stacked');
@@ -566,8 +564,19 @@ $('#bs-example-navbar-collapse-2').on('hide.bs.collapse', function() {
       function myFunction() {
       alert("I am an alert box!");
       }
-      </script>
+</script>
+		   
+<script>
 
+
+function changecolor() {
+    document.getElementById("demo").style.color = "red";
+}
+
+function change(){
+    document.getElementById("demo").style.color = "black";
+}
+</script>
 
 
 </body>
